@@ -1,0 +1,8 @@
+<h1>To Do list </h1>
+
+<% @todos.each do |todo| %>
+ <div class="well">
+ 	<%= todo.description %>
+ 	<%= todo.completed %>
+ </div>
+<% end %>
