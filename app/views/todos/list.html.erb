@@ -1,0 +1,37 @@
+<div class="container">
+	<h1>To Do list </h1>
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Complete</h3>
+			<% @todos.each do |todo| %>
+				<% if todo.completed === true %>
+					<div class="well">
+						<%= todo.description %>
+						<div class="pull-right">
+							<%= link_to 'Show', todo, :class => "btn btn-primary"%>
+							<%= link_to 'Edit', edit_path(todo), :class => "btn btn-warning"%>
+							<%= link_to "Delete", todo, method: :delete, :class => "btn btn-danger"  %>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+		<div class="col-md-6">
+			<h3>Incomplete</h3>
+			<% @todos.each do |todo| %>
+				<% if todo.completed === false %>
+					<div class="well">
+						<%= todo.description %>
+						<div class="pull-right">
+							<%= link_to 'Show', todo, :class => "btn btn-primary"%>
+							<%= link_to 'Edit', edit_path(todo), :class => "btn btn-warning"%>
+							<%= link_to "Delete", todo, method: :delete, :class => "btn btn-danger"  %>
+							<%= link_to "Completed", complete_path(todo), :class => "btn btn-info"  %>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+	<%= link_to "Crear ToDo", todos_new_path, :class => "btn btn-success" %>
+</div>
