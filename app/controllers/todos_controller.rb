@@ -14,7 +14,11 @@ class TodosController < ApplicationController
   end
 
   def show
-  	@todo = Todo.find(params[:id])
+    @todo = Todo.find(params[:id])
+  end
+
+  def edit
+    @todo = Todo.find(params[:id])
   end
   
   private
