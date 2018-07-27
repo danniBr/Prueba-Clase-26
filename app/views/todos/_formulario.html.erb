@@ -1,7 +1,11 @@
 <%= form_with(model: @todo, local: true) do |f| %>
-	<%= f.label :ToDo_description %> 
-	<%= f.text_field :description %>
+	<div class="campo">
+		<%= f.label :ToDo_description %> 
+		<%= f.text_field :description %>
+	</div>
+	<div class="campo">
 	<%= f.label :Completed %>
 	<%= f.check_box :completed %>
-	<%= f.submit :crear %>
+	</div>
+	<%= f.submit :crear, :class => 'btn btn-primary' %>
 <% end %>

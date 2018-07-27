@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+.cabecera {
+	margin-bottom: 30px;
+}
+.cabecera a {
+	margin: 25px 0 0;
+}

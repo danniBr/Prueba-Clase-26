@@ -1,7 +1,14 @@
 <div class="container">
+	<div class="cabecera row">
+		<div class="col-md-9">
+			<h1>To Do list </h1>
+		</div>
+		<div class="col-md-3">
+			<%= link_to "Crear ToDo", todos_new_path, :class => "btn btn-success pull-right" %>
+		</div>
+	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<h1>To Do list </h1>
 			<% @todos.each do |todo| %>
 			 <div class="well">
 			 	<%= todo.description %>
@@ -13,7 +20,6 @@
 			 	</div>
 			 </div>
 			<% end %>
-			<%= link_to "Crear ToDo", todos_new_path, :class => "btn btn-success" %>
 		</div>
 	</div>
 </div>
