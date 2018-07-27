@@ -1,9 +1,2 @@
 <h1>To Do form </h1>
-
-<%= form_with(model: @todo, local: true) do |f| %>
-	<%= f.label :ToDo_description %> 
-	<%= f.text_field :description %>
-	<%= f.label :Completed %>
-	<%= f.check_box :completed %>
-	<%= f.submit :crear %>
-<% end %>
+<%= render 'formulario' %>
